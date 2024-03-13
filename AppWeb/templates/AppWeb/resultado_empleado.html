@@ -1,0 +1,29 @@
+{% extends 'AppWeb/padre.html'%}
+
+
+{% block titulo %}
+    Aquí puede dar de alta un empleado de la empresa
+{% endblock %}
+
+
+{% block parrafo %}
+<div style="display: flex; justify-content: center">
+ <h4>Los empleados con ese nombre son:</h4>
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        {%for empleado in resultados %}
+        
+        
+        
+            <li>Nombre y apellido: {{empleado.nombre}} {{empleado.apellido}} - Puesto: {{empleado.puesto}}</li>
+        
+        
+        
+        {% endfor %}
+        </ol>
+</div>
+
+{% endblock %}
